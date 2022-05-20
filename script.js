@@ -8,4 +8,5 @@ let resetButton = document.querySelector(".form__submit-btn_action_reset");
 // Disable 'Delete playlist' button if there are no songs
 if (songs.length === 0) {
   resetButton.setAttribute("disabled", true);
+  resetButton.setAttribute("style", "background-color: #f1f1f1");
 }
