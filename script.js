@@ -9,4 +9,7 @@ let resetButton = document.querySelector(".form__submit-btn_action_reset");
 if (songs.length === 0) {
   resetButton.setAttribute("disabled", true);
   resetButton.classList.add("form__submit-btn_disabled");
+} else {
+  resetButton.removeAttribute("disabled", false);
+  resetButton.classList.remove("form__submit-btn_disabled");
 }
