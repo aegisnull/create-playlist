@@ -97,6 +97,11 @@ h3 {
   cursor: pointer;
 }
 
+.form__submit-btn_disabled {
+  background-color: #f1f1f1;
+  cursor: default;
+}
+
 .no-songs {
   height: 70px;
   display: flex;
