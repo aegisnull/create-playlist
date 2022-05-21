@@ -21,6 +21,6 @@ function addSong() {
     <p class="song__title">Drive</p>
     <button class="song__like"></button>
   </div>`;
+  // Add button on click listener
+  addButton.addEventListener("click", addSong);
 }
-
-addSong();
