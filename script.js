@@ -16,7 +16,7 @@ if (songs.length === 0) {
 
 // Function to add a song to the playlist
 function addSong() {
-  songsContainer.innerHTML = `<div class="song">
+  songsContainer.innerHTML += `<div class="song">
     <h4 class="song__artist">The Cars</h4>
     <p class="song__title">Drive</p>
     <button class="song__like"></button>
