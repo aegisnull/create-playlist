@@ -18,22 +18,33 @@ if (songs.length === 0) {
 function renderAdded() {
   let songs = songsContainer.querySelectorAll(".song");
 
+  /* define la variable noSongsElement.
+    Esta debe contener el elemento con la clase .no-songs */
+  let noSongsElement = container.querySelector(".no-songs");
+
   if (songs.length === 0) {
     resetButton.setAttribute("disabled", true);
     resetButton.classList.add("form__submit-btn_disabled");
+    // elimina el estado oculto para cuando no hay canciones
+    noSongsElement.classList.remove("no-songs_hidden");
   } else {
     resetButton.removeAttribute("disabled");
     resetButton.classList.remove("form__submit-btn_disabled");
+    // oculta el elemento no-songs si la lista de reproducción tiene canciones
+    noSongsElement.classList.add("no-songs_hidden");
   }
 }
 
 // Function to add a song to the playlist
 function addSong() {
   songsContainer.innerHTML += `<div class="song">
-    <h4 class="song__artist">The Cars</h4>
-    <p class="song__title">Drive</p>
+    <h4 class="song__artist">TWICE</h4>
+    <p class="song__title">The Feels</p>
     <button class="song__like"></button>
   </div>`;
   // Add button on click listener
   addButton.addEventListener("click", addSong);
+  renderAdded();
 }
+
+renderAdded();
