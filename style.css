@@ -152,3 +152,7 @@ h3 {
   background: url(https://code.s3.yandex.net/web-code/dom/heart-filled.svg)
     center no-repeat;
 }
+
+.no-songs_hidden {
+  display: none;
+}
