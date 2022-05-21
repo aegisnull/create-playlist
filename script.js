@@ -14,6 +14,19 @@ if (songs.length === 0) {
   resetButton.classList.remove("form__submit-btn_disabled");
 }
 
+//Functions
+function renderAdded() {
+  let songs = songsContainer.querySelectorAll(".song");
+
+  if (songs.length === 0) {
+    resetButton.setAttribute("disabled", true);
+    resetButton.classList.add("form__submit-btn_disabled");
+  } else {
+    resetButton.removeAttribute("disabled");
+    resetButton.classList.remove("form__submit-btn_disabled");
+  }
+}
+
 // Function to add a song to the playlist
 function addSong() {
   songsContainer.innerHTML += `<div class="song">
