@@ -50,6 +50,9 @@ function addSong() {
           </div>
     `
   );
+  //Empty strings for the inpur values after adding a song
+  artist.value = "";
+  song.value = "";
 
   renderAdded();
 }
