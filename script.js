@@ -39,16 +39,21 @@ function renderAdded() {
 function addSong() {
   let artist = document.querySelector(".input__text_type_artist");
   let song = document.querySelector(".input__text_type_song");
+
   songsContainer.insertAdjacentHTML(
     "beforeend",
-    `<div class="song">
-  <h4 class="song__artist">${artist.value}</h4>
-  <p class="song__title">${song.value}</p>
-  <button class="song__like"></button>
-</div>`
+    `
+          <div class="song">
+        <h4 class="song__artist">${artist.value}</h4>
+        <p class="song__title">${song.value}</p>
+            <button class="song__like"></button>
+          </div>
+    `
   );
+
+  renderAdded();
 }
 
-// Add button on click listener
 addButton.addEventListener("click", addSong);
+
 renderAdded();
