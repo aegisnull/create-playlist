@@ -47,9 +47,8 @@ function addSong() {
   <button class="song__like"></button>
 </div>`
   );
-  // Add button on click listener
-  addButton.addEventListener("click", addSong);
-  renderAdded();
 }
 
+// Add button on click listener
+addButton.addEventListener("click", addSong);
 renderAdded();
