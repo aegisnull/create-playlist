@@ -37,13 +37,15 @@ function renderAdded() {
 
 // Function to add a song to the playlist
 function addSong() {
+  let artist = document.querySelector(".input__text_type_artist");
+  let song = document.querySelector(".input__text_type_song");
   songsContainer.insertAdjacentHTML(
     "beforeend",
     `<div class="song">
-    <h4 class="song__artist">TWICE</h4>
-    <p class="song__title">The Feels</p>
-    <button class="song__like"></button>
-  </div>`
+  <h4 class="song__artist">${artist.value}</h4>
+  <p class="song__title">${song.value}</p>
+  <button class="song__like"></button>
+</div>`
   );
   // Add button on click listener
   addButton.addEventListener("click", addSong);
